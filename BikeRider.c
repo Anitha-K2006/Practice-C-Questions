@@ -1,11 +1,20 @@
 #include<stdio.h>
 int main()
 {
-    int Total=1000,Refueling;
-    int N,M,D,i;
+    int N,M,D;
+    int Total=1000;
+    int Refueling;
     scanf("%d%d%d",&N,&M,&D);
-    i=N*M;
-    if(i>D)
+    int i=N*M;
+    if(i>=Total)
+    {
+        printf("1");
+    }
+    else if(i>=500)
+    {
+        printf("2");
+    }
+    else if(i>=D)
     {
         Refueling=Total/D;
         printf("%d",Refueling);
@@ -14,5 +23,20 @@ int main()
     {
         printf("-1");
     }
-    
-}
+    return 0;
+} 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
