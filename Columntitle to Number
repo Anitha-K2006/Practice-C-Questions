@@ -1,0 +1,29 @@
+#include<stdio.h>
+#include<string.h>
+void columntitle ()
+{
+    char name[30];
+    scanf("%s",name);
+    int l=strlen(name);
+    int res=0;
+    int i=0;
+    if (l<=7)
+    {
+      while(name[i]!='\0')
+      {
+        if(name[i]>='A'&&name[i]<='Z')
+        {
+         res=res*26;
+         res=res+name[i]-'A'+1;
+        }
+         i++;
+      }
+    }
+    printf("%d",res);
+}
+int main()
+{
+    columntitle();
+    return 0;
+}
+    
