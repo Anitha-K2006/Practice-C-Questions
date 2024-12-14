@@ -2,10 +2,11 @@
 #include<string.h>
 int main() {
    char letter[25];
-   scanf("%s",lett);
+   scanf("%s",letter);
    int l=0;
-   l=strlen(lett);
-   int char=0,ascii=0,t;
+   l=strlen(letter);
+   int chara=0;
+   int ascii=0,t;
    for(int i=0;i<l-1;i++)
    {
        t=1;
@@ -15,16 +16,16 @@ int main() {
        {
            if(letter[i]==letter[j])
            {
-               letter[j]='@';
+               letter[j]='%';
                t++;
            }
        }
-       if(((t==1)||(t%2==1))&&(t>char))
+       if(((t==1)||(t%2==1))&&(t>chara))
        {
-           char=t;
+           chara=t;
            ascii=(int)letter[i];
        }
        }
- }
+   }
    printf("%d",ascii);
 }
